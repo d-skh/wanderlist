@@ -103,7 +103,7 @@
         <!-- Аватар -->
         <div class="hero-avatar pre-animate">
           <div class="avatar-container">
-            <img src="/images/characters/anton-avatar.png" alt="Антон" class="avatar-image">
+            <img src="./images/characters/anton-avatar.png" alt="Антон" class="avatar-image">
             <div class="avatar-glow"></div>
           </div>
           <div class="avatar-badge">IT</div>
@@ -300,7 +300,7 @@
                       <div class="step-title">Будильник</div>
                       <div class="step-quote">"Опять эти серые утра... Выключу еще на 10 минут"</div>
                       <div class="step-image">
-                        <img src="/images/routine/alarm-clock.png" alt="Будильник утро">
+                        <img src="./images/routine/alarm-clock.png" alt="Будильник утро">
                         <div class="image-overlay">
                           <div class="overlay-text">5 раз нажать "Отложить"</div>
                         </div>
@@ -318,7 +318,7 @@
                       <div class="step-title">Кофе и новости</div>
                       <div class="step-quote">"Тот же кофе, те же новости... Может, сегодня что-то изменится?"</div>
                       <div class="step-image">
-                        <img src="/images/routine/morning-coffee.png" alt="Утренний кофе">
+                        <img src="./images/routine/morning-coffee.png" alt="Утренний кофе">
                         <div class="image-overlay">
                           <div class="overlay-text">3 чашки кофе</div>
                         </div>
@@ -336,7 +336,7 @@
                       <div class="step-title">Дорога на работу</div>
                       <div class="step-quote">"Пробки, метро, толпа... Все как вчера, как позавчера"</div>
                       <div class="step-image">
-                        <img src="/images/routine/commute.png" alt="Дорога на работу">
+                        <img src="./images/routine/commute.png" alt="Дорога на работу">
                         <div class="image-overlay">
                           <div class="overlay-text">45 минут в пути</div>
                         </div>
@@ -367,7 +367,7 @@
                       <div class="step-title">Планерка</div>
                       <div class="step-quote">"Спринт, бэклог, дедлайны... Те же слова каждый день"</div>
                       <div class="step-image">
-                        <img src="/images/routine/meeting.png" alt="Планерка">
+                        <img src="./images/routine/meeting.png" alt="Планерка">
                         <div class="image-overlay">
                           <div class="overlay-text">1 час совещаний</div>
                         </div>
@@ -385,7 +385,7 @@
                       <div class="step-title">Код, баги, задачи</div>
                       <div class="step-quote">"Сижу перед монитором, а в голове - горы Алтая..."</div>
                       <div class="step-image">
-                        <img src="/images/routine/coding.png" alt="Работа за компьютером">
+                        <img src="./images/routine/coding.png" alt="Работа за компьютером">
                         <div class="image-overlay">
                           <div class="overlay-text">247 строк кода</div>
                         </div>
@@ -403,7 +403,7 @@
                       <div class="step-title">Обеденный перерыв</div>
                       <div class="step-quote">"Снова тот же ланч-бокс... Листаю инстаграм с красивыми местами"</div>
                       <div class="step-image">
-                        <img src="/images/routine/lunch-break.png" alt="Обеденный перерыв">
+                        <img src="./images/routine/lunch-break.png" alt="Обеденный перерыв">
                         <div class="image-overlay">
                           <div class="overlay-text">15 сохраненных постов</div>
                         </div>
@@ -421,7 +421,7 @@
                       <div class="step-title">Послеобеденный спад</div>
                       <div class="step-quote">"Глаза слипаются... Мечтаю оказаться где-нибудь на берегу озера"</div>
                       <div class="step-image">
-                        <img src="/images/routine/afternoon-slump.png" alt="Послеобеденный спад">
+                        <img src="./images/routine/afternoon-slump.png" alt="Послеобеденный спад">
                         <div class="image-overlay">
                           <div class="overlay-text">3 чашки кофе</div>
                         </div>
@@ -439,7 +439,7 @@
                       <div class="step-title">Конец рабочего дня</div>
                       <div class="step-quote">"Еще один день прошел... А мечты все там же - в телефоне"</div>
                       <div class="step-image">
-                        <img src="/images/routine/end-of-work.png" alt="Конец рабочего дня">
+                        <img src="./images/routine/end-of-work.png" alt="Конец рабочего дня">
                         <div class="image-overlay">
                           <div class="overlay-text">8 часов за монитором</div>
                         </div>
@@ -470,7 +470,7 @@
                       <div class="step-title">Дорога домой</div>
                       <div class="step-quote">"Та же толпа, те же лица... Все куда-то спешат"</div>
                       <div class="step-image">
-                        <img src="/images/routine/evening-commute.png" alt="Дорога домой">
+                        <img src="./images/routine/evening-commute.png" alt="Дорога домой">
                         <div class="image-overlay">
                           <div class="overlay-text">50 минут в метро</div>
                         </div>
@@ -488,7 +488,7 @@
                       <div class="step-title">Ужин и сериалы</div>
                       <div class="step-quote">"Доставка, Netflix... Снова вижу красивые места на экране"</div>
                       <div class="step-image">
-                        <img src="/images/routine/dinner-netflix.png" alt="Ужин и сериалы">
+                        <img src="./images/routine/dinner-netflix.png" alt="Ужин и сериалы">
                         <div class="image-overlay">
                           <div class="overlay-text">3 серии подряд</div>
                         </div>
@@ -506,7 +506,7 @@
                       <div class="step-title">Соцсети перед сном</div>
                       <div class="step-quote">"Листаю красивые фото... Завтра точно начну планировать поездку"</div>
                       <div class="step-image">
-                        <img src="/images/routine/social-media-bed.png" alt="Соцсети перед сном">
+                        <img src="./images/routine/social-media-bed.png" alt="Соцсети перед сном">
                         <div class="image-overlay">
                           <div class="overlay-text">47 новых сохранений</div>
                         </div>
@@ -524,7 +524,7 @@
                       <div class="step-title">Сон</div>
                       <div class="step-quote">"Засыпаю с мыслями о горах... Завтра все будет по-другому"</div>
                       <div class="step-image">
-                        <img src="/images/routine/sleep-dreams.png" alt="Сон и мечты">
+                        <img src="./images/routine/sleep-dreams.png" alt="Сон и мечты">
                         <div class="image-overlay">
                           <div class="overlay-text">Мечты о путешествиях</div>
                         </div>
@@ -781,7 +781,7 @@
                             <!-- Шапка поста -->
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/travel_russia.jpg" alt="Travel Russia">
+                                <img src="./images/avatars/travel_russia.jpg" alt="Travel Russia">
                               </div>
                               <div class="post-user">travel_russia</div>
                               <div class="post-more">⋯</div>
@@ -789,7 +789,7 @@
                             
                             <!-- Основное изображение поста -->
                             <div class="post-image">
-                              <img src="/images/dreams/dream-1.png" alt="Горный пейзаж Алтая">
+                              <img src="./images/dreams/dream-1.png" alt="Горный пейзаж Алтая">
                             </div>
                             
                             <!-- Панель действий - БОЛЬШИЕ И ЗАМЕТНЫЕ КНОПКИ -->
@@ -871,14 +871,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/explore_russia.jpg" alt="Explore Russia">
+                                <img src="./images/avatars/explore_russia.jpg" alt="Explore Russia">
                               </div>
                               <div class="post-user">explore_russia</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-2.png" alt="Осенний Петербург">
+                              <img src="./images/dreams/dream-2.png" alt="Осенний Петербург">
                             </div>
                             
                             <div class="post-actions">
@@ -947,14 +947,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/nature_lover.jpg" alt="Nature Lover">
+                                <img src="./images/avatars/nature_lover.jpg" alt="Nature Lover">
                               </div>
                               <div class="post-user">nature_lover</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-3.png" alt="Озеро Байкал">
+                              <img src="./images/dreams/dream-3.png" alt="Озеро Байкал">
                             </div>
                             
                             <div class="post-actions">
@@ -1023,14 +1023,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/adventure_seeker.jpg" alt="Adventure Seeker">
+                                <img src="./images/avatars/adventure_seeker.jpg" alt="Adventure Seeker">
                               </div>
                               <div class="post-user">adventure_seeker</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-4.png" alt="Вулканы Камчатки">
+                              <img src="./images/dreams/dream-4.png" alt="Вулканы Камчатки">
                             </div>
                             
                             <div class="post-actions">
@@ -1099,14 +1099,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/extreme_travel.jpg" alt="Extreme Travel">
+                                <img src="./images/avatars/extreme_travel.jpg" alt="Extreme Travel">
                               </div>
                               <div class="post-user">extreme_travel</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-5.png" alt="Горы Кавказа">
+                              <img src="./images/dreams/dream-5.png" alt="Горы Кавказа">
                             </div>
                             
                             <div class="post-actions">
@@ -1175,14 +1175,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/history_buff.jpg" alt="History Buff">
+                                <img src="./images/avatars/history_buff.jpg" alt="History Buff">
                               </div>
                               <div class="post-user">history_buff</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-6.png" alt="Золотое кольцо России">
+                              <img src="./images/dreams/dream-6.png" alt="Золотое кольцо России">
                             </div>
                             
                             <div class="post-actions">
@@ -1251,14 +1251,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/nature_lover.jpg" alt="Nature Lover">
+                                <img src="./images/avatars/nature_lover.jpg" alt="Nature Lover">
                               </div>
                               <div class="post-user">nature_lover</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-7.png" alt="Озера Карелии">
+                              <img src="./images/dreams/dream-7.png" alt="Озера Карелии">
                             </div>
                             
                             <div class="post-actions">
@@ -1327,14 +1327,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/travel_russia.jpg" alt="Travel Russia">
+                                <img src="./images/avatars/travel_russia.jpg" alt="Travel Russia">
                               </div>
                               <div class="post-user">travel_russia</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-8.png" alt="Побережье Крыма">
+                              <img src="./images/dreams/dream-8.png" alt="Побережье Крыма">
                             </div>
                             
                             <div class="post-actions">
@@ -1403,14 +1403,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/explore_russia.jpg" alt="Explore Russia">
+                                <img src="./images/avatars/explore_russia.jpg" alt="Explore Russia">
                               </div>
                               <div class="post-user">explore_russia</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-9.png" alt="Уральские горы">
+                              <img src="./images/dreams/dream-9.png" alt="Уральские горы">
                             </div>
                             
                             <div class="post-actions">
@@ -1479,14 +1479,14 @@
                             
                             <div class="post-header">
                               <div class="post-avatar">
-                                <img src="/images/avatars/adventure_seeker.jpg" alt="Adventure Seeker">
+                                <img src="./images/avatars/adventure_seeker.jpg" alt="Adventure Seeker">
                               </div>
                               <div class="post-user">adventure_seeker</div>
                               <div class="post-more">⋯</div>
                             </div>
                             
                             <div class="post-image">
-                              <img src="/images/dreams/dream-10.png" alt="Дальний Восток">
+                              <img src="./images/dreams/dream-10.png" alt="Дальний Восток">
                             </div>
                             
                             <div class="post-actions">
@@ -1699,7 +1699,7 @@
 
           <div class="chaos-visual pre-animate" style="max-width: 600px; margin: 2rem auto;">
             <div class="chaos-image">
-              <img src="/images/chaos/chaos-before.png" alt="Хаос планирования" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+              <img src="./images/chaos/chaos-before.png" alt="Хаос планирования" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
             </div>
             <div class="image-caption" style="text-align: center; margin-top: 1rem; opacity: 0.8; font-style: italic;">
               "Слишком много вариантов, слишком много отзывов. Я просто закрыл ноутбук и пошел спать."
@@ -1845,7 +1845,7 @@
                 </div>
                 <div class="quote__author">
                   <div class="author__avatar">
-                    <img src="/images/characters/anton-avatar.png" alt="Антон">
+                    <img src="./images/characters/anton-avatar.png" alt="Антон">
                   </div>
                   <div class="author__info">
                     <div class="author__name">Антон</div>
@@ -1914,7 +1914,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/maria-avatar.png" alt="Мария">
+                          <img src="./images/stories/maria-avatar.png" alt="Мария">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Мария, 25 лет</div>
@@ -1971,7 +1971,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/dmitry-avatar.png" alt="Дмитрий">
+                          <img src="./images/stories/dmitry-avatar.png" alt="Дмитрий">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Дмитрий, 32 года</div>
@@ -2028,7 +2028,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/anna-avatar.png" alt="Анна">
+                          <img src="./images/stories/anna-avatar.png" alt="Анна">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Анна, 28 лет</div>
@@ -2086,7 +2086,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-4.png" alt="Алексей">
+                          <img src="./images/stories/story-4.png" alt="Алексей">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Алексей, 35 лет</div>
@@ -2141,7 +2141,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-5.png" alt="Ольга">
+                          <img src="./images/stories/story-5.png" alt="Ольга">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Ольга, 26 лет</div>
@@ -2196,7 +2196,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-6.png" alt="Сергей">
+                          <img src="./images/stories/story-6.png" alt="Сергей">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Сергей, 41 год</div>
@@ -2251,7 +2251,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-7.png" alt="Елена">
+                          <img src="./images/stories/story-7.png" alt="Елена">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Елена, 29 лет</div>
@@ -2306,7 +2306,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-8.png" alt="Иван">
+                          <img src="./images/stories/story-8.png" alt="Иван">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Иван, 33 года</div>
@@ -2361,7 +2361,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-9.png" alt="Татьяна">
+                          <img src="./images/stories/story-9.png" alt="Татьяна">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Татьяна, 31 год</div>
@@ -2416,7 +2416,7 @@
                     <div class="story-card">
                       <div class="story-header">
                         <div class="story-avatar">
-                          <img src="/images/stories/story-10.png" alt="Михаил">
+                          <img src="./images/stories/story-10.png" alt="Михаил">
                         </div>
                         <div class="story-info">
                           <div class="story-name">Михаил, 27 лет</div>
@@ -2549,7 +2549,7 @@
             <div class="trip-hero pre-animate">
               <div class="hero-media">
                 <div class="media-container">
-                  <img src="/images/trips/altai-main.jpg" alt="Алтай" class="hero-image">
+                  <img src="./images/trips/altai-main.jpg" alt="Алтай" class="hero-image">
                   <div class="media-overlay">
                     <div class="play-button">
                       <div class="play-icon">▶</div>
@@ -2593,9 +2593,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day1-1.png" alt="Аэропорт Горно-Алтайска" class="gallery-image active">
-                        <img src="/images/trips/day1-2.png" alt="Дорога до базы" class="gallery-image">
-                        <img src="/images/trips/day1-3.png" alt="Первые горные виды" class="gallery-image">
+                        <img src="./images/trips/day1-1.png" alt="Аэропорт Горно-Алтайска" class="gallery-image active">
+                        <img src="./images/trips/day1-2.png" alt="Дорога до базы" class="gallery-image">
+                        <img src="./images/trips/day1-3.png" alt="Первые горные виды" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -2653,9 +2653,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day2-1.png" alt="Чуйский тракт - горная дорога" class="gallery-image active">
-                        <img src="/images/trips/day2-2.png" alt="Семинский перевал" class="gallery-image">
-                        <img src="/images/trips/day2-3.png" alt="Панорама гор" class="gallery-image">
+                        <img src="./images/trips/day2-1.png" alt="Чуйский тракт - горная дорога" class="gallery-image active">
+                        <img src="./images/trips/day2-2.png" alt="Семинский перевал" class="gallery-image">
+                        <img src="./images/trips/day2-3.png" alt="Панорама гор" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -2713,9 +2713,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day3-1.png" alt="Телецкое озеро - панорама" class="gallery-image active">
-                        <img src="/images/trips/day3-2.png" alt="Водопад Корбу" class="gallery-image">
-                        <img src="/images/trips/day3-3.png" alt="Закат на озере" class="gallery-image">
+                        <img src="./images/trips/day3-1.png" alt="Телецкое озеро - панорама" class="gallery-image active">
+                        <img src="./images/trips/day3-2.png" alt="Водопад Корбу" class="gallery-image">
+                        <img src="./images/trips/day3-3.png" alt="Закат на озере" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -2773,9 +2773,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day4-1.png" alt="Манжерокское озеро" class="gallery-image active">
-                        <img src="/images/trips/day4-2.png" alt="Каракольские озера" class="gallery-image">
-                        <img src="/images/trips/day4-3.png" alt="Озеро в горах" class="gallery-image">
+                        <img src="./images/trips/day4-1.png" alt="Манжерокское озеро" class="gallery-image active">
+                        <img src="./images/trips/day4-2.png" alt="Каракольские озера" class="gallery-image">
+                        <img src="./images/trips/day4-3.png" alt="Озеро в горах" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -2833,9 +2833,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day5-1.png" alt="Водопад Учар" class="gallery-image active">
-                        <img src="/images/trips/day5-2.png" alt="Водопад Камышлинский" class="gallery-image">
-                        <img src="/images/trips/day5-3.png" alt="Горная река" class="gallery-image">
+                        <img src="./images/trips/day5-1.png" alt="Водопад Учар" class="gallery-image active">
+                        <img src="./images/trips/day5-2.png" alt="Водопад Камышлинский" class="gallery-image">
+                        <img src="./images/trips/day5-3.png" alt="Горная река" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -2893,9 +2893,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day6-1.png" alt="Восхождение на гору" class="gallery-image active">
-                        <img src="/images/trips/day6-2.png" alt="Вид с вершины" class="gallery-image">
-                        <img src="/images/trips/day6-3.png" alt="Альпийские луга" class="gallery-image">
+                        <img src="./images/trips/day6-1.png" alt="Восхождение на гору" class="gallery-image active">
+                        <img src="./images/trips/day6-2.png" alt="Вид с вершины" class="gallery-image">
+                        <img src="./images/trips/day6-3.png" alt="Альпийские луга" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -2953,9 +2953,9 @@
                   <div class="day-content">
                     <div class="day-media">
                       <div class="media-gallery">
-                        <img src="/images/trips/day7-1.png" alt="Прощальный закат" class="gallery-image active">
-                        <img src="/images/trips/day7-2.png" alt="Дорога домой" class="gallery-image">
-                        <img src="/images/trips/day7-3.png" alt="Групповое фото" class="gallery-image">
+                        <img src="./images/trips/day7-1.png" alt="Прощальный закат" class="gallery-image active">
+                        <img src="./images/trips/day7-2.png" alt="Дорога домой" class="gallery-image">
+                        <img src="./images/trips/day7-3.png" alt="Групповое фото" class="gallery-image">
                       </div>
                       <div class="gallery-nav">
                         <button class="gallery-prev">‹</button>
@@ -3027,7 +3027,7 @@
                 <div class="team-main">
                   <div class="team-member featured">
                     <div class="member-avatar">
-                      <img src="/images/characters/anton-avatar.png" alt="Антон">
+                      <img src="./images/characters/anton-avatar.png" alt="Антон">
                       <div class="member-status online"></div>
                     </div>
                     <div class="member-info">
@@ -3052,7 +3052,7 @@
                   <div class="companion-row">
                     <div class="team-member companion">
                       <div class="member-avatar">
-                        <img src="/images/characters/alex-avatar.png" alt="Алекс">
+                        <img src="./images/characters/alex-avatar.png" alt="Алекс">
                         <div class="member-badge">👑</div>
                       </div>
                       <div class="member-info">
@@ -3064,7 +3064,7 @@
 
                     <div class="team-member companion">
                       <div class="member-avatar">
-                        <img src="/images/characters/maria-avatar.png" alt="Мария">
+                        <img src="./images/characters/maria-avatar.png" alt="Мария">
                         <div class="member-badge">📸</div>
                       </div>
                       <div class="member-info">
@@ -3078,7 +3078,7 @@
                   <div class="companion-row">
                     <div class="team-member companion">
                       <div class="member-avatar">
-                        <img src="/images/characters/olga-avatar.png" alt="Ольга">
+                        <img src="./images/characters/olga-avatar.png" alt="Ольга">
                         <div class="member-badge">💫</div>
                       </div>
                       <div class="member-info">
@@ -3147,7 +3147,7 @@
             <div class="transformation-quote pre-animate">
               <div class="quote-container">
                 <div class="quote-avatar">
-                  <img src="/images/characters/anton-avatar.png" alt="Антон">
+                  <img src="./images/characters/anton-avatar.png" alt="Антон">
                 </div>
                 <div class="quote-content">
                   <div class="quote-text">
@@ -3247,7 +3247,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/altai.jpg" alt="Алтай">
+                        <img src="./images/destinations/altai.jpg" alt="Алтай">
                         <div class="destination-price">от 25 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.9</span>
@@ -3290,7 +3290,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/baikal.jpg" alt="Байкал">
+                        <img src="./images/destinations/baikal.jpg" alt="Байкал">
                         <div class="destination-price">от 32 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.8</span>
@@ -3333,7 +3333,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/kamchatka.jpg" alt="Камчатка">
+                        <img src="./images/destinations/kamchatka.jpg" alt="Камчатка">
                         <div class="destination-price">от 68 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.9</span>
@@ -3376,7 +3376,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/caucasus.jpg" alt="Кавказ">
+                        <img src="./images/destinations/caucasus.jpg" alt="Кавказ">
                         <div class="destination-price">от 28 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.7</span>
@@ -3419,7 +3419,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/golden-ring.jpg" alt="Золотое кольцо">
+                        <img src="./images/destinations/golden-ring.jpg" alt="Золотое кольцо">
                         <div class="destination-price">от 18 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.6</span>
@@ -3462,7 +3462,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/karelia.jpg" alt="Карелия">
+                        <img src="./images/destinations/karelia.jpg" alt="Карелия">
                         <div class="destination-price">от 22 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.8</span>
@@ -3505,7 +3505,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/crimea.jpg" alt="Крым">
+                        <img src="./images/destinations/crimea.jpg" alt="Крым">
                         <div class="destination-price">от 20 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.7</span>
@@ -3548,7 +3548,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/urals.jpg" alt="Урал">
+                        <img src="./images/destinations/urals.jpg" alt="Урал">
                         <div class="destination-price">от 26 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.5</span>
@@ -3591,7 +3591,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/far-east.jpg" alt="Дальний Восток">
+                        <img src="./images/destinations/far-east.jpg" alt="Дальний Восток">
                         <div class="destination-price">от 45 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.8</span>
@@ -3634,7 +3634,7 @@
                   <div class="carousel-slide">
                     <div class="destination-card">
                       <div class="destination-image">
-                        <img src="/images/destinations/siberia.jpg" alt="Сибирь">
+                        <img src="./images/destinations/siberia.jpg" alt="Сибирь">
                         <div class="destination-price">от 35 000 ₽</div>
                         <div class="destination-rating">
                           <span>⭐ 4.6</span>

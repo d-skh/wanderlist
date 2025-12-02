@@ -10,7 +10,8 @@ export default defineConfig({
   root: ".",
   publicDir: "public",
   build: {
-    outDir: "dist",
+    outDir: "docs",
+    emptyOutDir: true,
     assetsDir: "assets",
     // Для лучшей совместимости с GitHub Pages
     rollupOptions: {
