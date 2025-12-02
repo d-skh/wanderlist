@@ -1,0 +1,326 @@
+// ===== ENHANCED LOADING SCREEN =====
+// ===== ENHANCED VACATION LOADING =====
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #0f0f2d 0%,
+    #1a1a4b 30%,
+    #2d1b69 70%,
+    #4a1c7a 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(102, 126, 234, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(240, 147, 251, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 40% 40%,
+        rgba(118, 75, 162, 0.1) 0%,
+        transparent 50%
+      );
+    animation: backgroundPulse 8s ease-in-out infinite;
+  }
+
+  .loader {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    &-vacation {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      margin: 0 auto 3rem;
+    }
+
+    &-moon {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea, #f093fb);
+      border-radius: 50%;
+      box-shadow: 0 0 50px rgba(102, 126, 234, 0.7),
+        0 0 100px rgba(240, 147, 251, 0.5),
+        inset 0 -5px 10px rgba(255, 255, 255, 0.2);
+      animation: moonFloat 3s ease-in-out infinite;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        box-shadow: -5px -5px 0 rgba(255, 255, 255, 0.05),
+          10px 10px 0 rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    &-mountains {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+
+      .mountain {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 60px solid rgba(118, 75, 162, 0.8);
+        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+
+        &:nth-child(1) {
+          left: 10px;
+          border-bottom-color: rgba(102, 126, 234, 0.9);
+          animation: mountainGlow 4s ease-in-out infinite;
+        }
+
+        &:nth-child(2) {
+          left: 70px;
+          border-bottom-color: rgba(118, 75, 162, 0.8);
+          animation: mountainGlow 4s ease-in-out infinite 1s;
+        }
+
+        &:nth-child(3) {
+          left: 130px;
+          border-bottom-color: rgba(240, 147, 251, 0.7);
+          animation: mountainGlow 4s ease-in-out infinite 2s;
+        }
+      }
+    }
+
+    &-stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: $color-white;
+        border-radius: 50%;
+        opacity: 0;
+
+        @for $i from 1 through 15 {
+          &:nth-child(#{$i}) {
+            top: random(80) + %;
+            left: random(100) + %;
+            animation: starTwinkle 3s ease-in-out infinite;
+            animation-delay: $i * 0.2s;
+          }
+        }
+      }
+    }
+
+    &-compass {
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: compassRotate 8s linear infinite;
+
+      &::before {
+        content: "N";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $color-accent;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 15px;
+        height: 15px;
+        background: linear-gradient(135deg, $color-primary, $color-accent);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+    }
+
+    &-brand {
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #667eea, #f093fb, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 10%;
+        width: 80%;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          $color-primary,
+          $color-accent,
+          transparent
+        );
+        border-radius: 2px;
+        animation: brandShine 3s ease-in-out infinite;
+      }
+    }
+
+    &-text {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: $color-white;
+        border-radius: 50%;
+        opacity: 0;
+
+        @for $i from 1 through 8 {
+          &:nth-child(#{$i}) {
+            top: random(100) + %;
+            left: random(100) + %;
+            animation: particleFloat 4s ease-in-out infinite;
+            animation-delay: $i * 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes moonFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@keyframes mountainGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 5px 25px rgba(102, 126, 234, 0.4)) brightness(1.2);
+  }
+}
+
+@keyframes compassRotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes brandShine {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scaleX(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes particleFloat {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1);
+  }
+}
+
+@keyframes backgroundPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}

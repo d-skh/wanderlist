@@ -1,0 +1,770 @@
+// ===== VARIABLES =====
+$dark-red-1: #1a0000;
+$dark-red-2: #2a0000;
+$dark-red-3: #450000;
+$dark-red-4: #5a0000;
+$fire-red: #8b0000;
+$fire-orange: #b22222;
+$fire-bright: #dc143c;
+$fire-flame: #ff4500;
+$fire-yellow: #ffa500;
+$fire-gold: #ffd700;
+
+// ===== BASE BACKGROUND =====
+.story-section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: $dark-red-1;
+}
+
+// ===== ANIMATED GRADIENT BACKGROUND =====
+.dark-fire-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      135deg,
+      $dark-red-2 0%,
+      $dark-red-3 25%,
+      $dark-red-4 50%,
+      $dark-red-3 75%,
+      $dark-red-2 100%
+    ),
+    radial-gradient(
+      ellipse at 30% 70%,
+      rgba($fire-red, 0.4) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 70% 30%,
+      rgba($fire-orange, 0.3) 0%,
+      transparent 50%
+    );
+  background-size: 400% 400%, 200% 200%, 200% 200%;
+  animation: gradientShift 8s ease infinite,
+    gradientPulse 12s ease-in-out infinite;
+  filter: contrast(1.2) brightness(0.9);
+}
+
+// ===== FIRE EFFECTS =====
+.fire-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  pointer-events: none;
+}
+
+// Fire Base Layers
+.fire-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 50% 50% 0 0;
+  mix-blend-mode: screen;
+  filter: blur(15px);
+}
+
+.fire-layer-1 {
+  height: 50%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 0.9) 0%,
+    rgba($fire-flame, 0.7) 30%,
+    rgba($fire-yellow, 0.4) 60%,
+    transparent 90%
+  );
+  animation: firePulse 4s ease-in-out infinite;
+}
+
+.fire-layer-2 {
+  height: 65%;
+  background: linear-gradient(
+    0deg,
+    rgba($fire-flame, 0.8) 0%,
+    rgba($fire-yellow, 0.5) 25%,
+    rgba($fire-gold, 0.3) 50%,
+    transparent 80%
+  );
+  animation: firePulse 3.5s ease-in-out infinite reverse;
+  filter: blur(20px);
+}
+
+.fire-layer-3 {
+  height: 45%;
+  background: linear-gradient(
+    0deg,
+    rgba($fire-yellow, 0.6) 0%,
+    rgba($fire-gold, 0.4) 40%,
+    transparent 70%
+  );
+  animation: firePulse 5s ease-in-out infinite;
+  filter: blur(25px);
+}
+
+// Individual Flames
+.fire-flame {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  filter: blur(8px);
+  animation: flameFloat var(--flame-duration, 6s) ease-in-out infinite;
+  animation-delay: var(--flame-delay, 0s);
+}
+
+.flame-1 {
+  left: 20%;
+  width: 120px;
+  height: 80px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 0, 0.6) 0%,
+    rgba($fire-yellow, 0.4) 50%,
+    transparent 70%
+  );
+}
+
+.flame-2 {
+  left: 50%;
+  width: 150px;
+  height: 100px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba($fire-flame, 0.7) 0%,
+    rgba($fire-yellow, 0.5) 50%,
+    transparent 70%
+  );
+}
+
+.flame-3 {
+  left: 80%;
+  width: 100px;
+  height: 70px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba($fire-gold, 0.5) 0%,
+    rgba($fire-yellow, 0.3) 50%,
+    transparent 70%
+  );
+}
+
+// Fire Sparks
+.fire-spark {
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: sparkFloat 8s linear infinite;
+  animation-delay: var(--spark-delay, 0s);
+  mix-blend-mode: screen;
+}
+
+.spark-1 {
+  left: 30%;
+}
+.spark-2 {
+  left: 60%;
+}
+.spark-3 {
+  left: 45%;
+}
+.spark-4 {
+  left: 15%;
+}
+.spark-5 {
+  left: 75%;
+}
+.spark-6 {
+  left: 55%;
+}
+
+// ===== SMOKE EFFECTS =====
+.smoke-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.smoke-cloud {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(128, 128, 128, 0.15) 0%,
+    rgba(105, 105, 105, 0.1) 30%,
+    transparent 70%
+  );
+  mix-blend-mode: overlay;
+  filter: blur(25px);
+  animation: smokeRise var(--cloud-duration, 20s) linear infinite;
+  animation-delay: var(--cloud-delay, 0s);
+  width: var(--cloud-size, 200px);
+  height: calc(var(--cloud-size, 200px) * 0.7);
+  bottom: -100px;
+  left: var(--cloud-left, 50%);
+}
+
+// ===== PARTICLE EFFECTS =====
+.floating-embers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ember-particle {
+  position: absolute;
+  bottom: -10px;
+  left: var(--particle-left, 50%);
+  width: var(--particle-size, 3px);
+  height: var(--particle-size, 3px);
+  background: radial-gradient(
+    circle,
+    rgba($fire-yellow, 0.8) 0%,
+    rgba($fire-flame, 0.6) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: particleFloat var(--particle-duration, 15s) linear infinite;
+  animation-delay: var(--particle-delay, 0s);
+  mix-blend-mode: screen;
+  filter: blur(1px);
+}
+
+.glow-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(
+      circle,
+      rgba($fire-flame, 0.4) 0%,
+      transparent 70%
+    );
+    animation: particleGlow 8s ease-in-out infinite;
+    filter: blur(15px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 40%;
+    right: 25%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(
+      circle,
+      rgba($fire-orange, 0.3) 0%,
+      transparent 70%
+    );
+    animation: particleGlow 12s ease-in-out infinite reverse;
+    filter: blur(20px);
+  }
+}
+
+// ===== BROWSER TABS =====
+.floating-browser-tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.browser-tab {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.95) 50%,
+    rgba(241, 245, 249, 0.92) 100%
+  );
+  border-radius: 12px 12px 8px 8px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6), 0 6px 25px rgba($fire-flame, 0.4),
+    0 3px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  min-width: 240px;
+  z-index: 10;
+  transform: translate(-50%, -50%) rotate(0deg);
+  overflow: hidden;
+
+  // Enhanced floating animations
+  animation: tabDrift 20s ease-in-out infinite,
+    tabFloat var(--float-speed, 6s) ease-in-out infinite,
+    tabSway 15s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2) rotate(var(--rotation, 0deg)) !important;
+    box-shadow: 0 25px 80px rgba($fire-flame, 0.7),
+      0 12px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 0 60px rgba($fire-yellow, 0.6), 0 0 0 2px rgba(255, 255, 255, 0.4);
+    z-index: 100;
+    animation-play-state: paused;
+
+    .tab-favicon {
+      transform: scale(1.3) rotate(10deg);
+      filter: drop-shadow(0 2px 4px rgba($fire-flame, 0.4));
+    }
+  }
+
+  .tab-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(248, 250, 252, 0.8) 100%
+    );
+  }
+
+  .tab-favicon {
+    font-size: 16px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: center;
+  }
+
+  .tab-title {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a202c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.1px;
+    transition: all 0.3s ease;
+  }
+
+  .tab-close {
+    font-size: 18px;
+    font-weight: bold;
+    color: #718096;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        rgba(220, 38, 38, 0.2) 0%,
+        rgba(220, 38, 38, 0.3) 100%
+      );
+      color: #dc2626;
+      transform: scale(1.3);
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  // Loading animation for specific tabs
+  &.loading-tab {
+    .tab-loading-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          transparent 100%
+        );
+        animation: loadingShine 3s ease-in-out infinite;
+      }
+    }
+
+    .loading-progress {
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        #dc2626 0%,
+        #ea580c 30%,
+        #f59e0b 60%,
+        #ea580c 100%
+      );
+      animation: loadingProgress var(--load-time, 2s) ease-in-out infinite;
+      transform-origin: left;
+      box-shadow: 0 0 10px rgba($fire-flame, 0.5);
+    }
+  }
+}
+
+// ===== ANIMATIONS =====
+
+// Background Animations
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%, 0% 0%, 100% 100%;
+  }
+  50% {
+    background-position: 100% 50%, 100% 100%, 0% 0%;
+  }
+}
+
+@keyframes gradientPulse {
+  0%,
+  100% {
+    filter: contrast(1.2) brightness(0.9);
+  }
+  50% {
+    filter: contrast(1.3) brightness(1);
+  }
+}
+
+// Fire Animations
+@keyframes firePulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scaleY(1) translateX(0);
+  }
+  25% {
+    opacity: 0.9;
+    transform: scaleY(1.2) translateX(-2%);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleY(1.1) translateX(1%);
+  }
+  75% {
+    opacity: 1;
+    transform: scaleY(1.3) translateX(-1%);
+  }
+}
+
+@keyframes flameFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  33% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.9;
+  }
+  66% {
+    transform: translateY(-10px) scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+@keyframes sparkFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+// Smoke Animations
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(calc(var(--cloud-left, 0) * 0.1))
+      scale(1.8) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+// Particle Animations
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh)
+      translateX(calc(sin(var(--particle-left, 0)) * 100px)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes particleGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.3);
+  }
+}
+
+// Tab Animations
+@keyframes tabDrift {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--drift-x, 10vw) * 0.4),
+        calc(var(--drift-y, -5vh) * 0.4)
+      )
+      rotate(calc(var(--rotation, 0deg) * 0.7)) scale(1.08);
+  }
+  40% {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--drift-x, 10vw) * 0.8),
+        calc(var(--drift-y, -5vh) * 0.8)
+      )
+      rotate(calc(var(--rotation, 0deg) * 1.2)) scale(1.04);
+  }
+  60% {
+    transform: translate(-50%, -50%)
+      translate(calc(var(--drift-x, 10vw) * 1), calc(var(--drift-y, -5vh) * 1))
+      rotate(var(--rotation, 0deg)) scale(0.96);
+  }
+  80% {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--drift-x, 10vw) * 0.6),
+        calc(var(--drift-y, -5vh) * 0.6)
+      )
+      rotate(calc(var(--rotation, 0deg) * 0.5)) scale(1.06);
+  }
+}
+
+@keyframes tabFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%)
+      translateY(calc(var(--float-height, 15px) * -0.7)) rotate(1.5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%)
+      translateY(calc(var(--float-height, 15px) * -1)) rotate(-1deg);
+  }
+  75% {
+    transform: translate(-50%, -50%)
+      translateY(calc(var(--float-height, 15px) * -0.3)) rotate(0.8deg);
+  }
+}
+
+@keyframes tabSway {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateX(0px);
+  }
+  33% {
+    transform: translate(-50%, -50%) translateX(8px);
+  }
+  66% {
+    transform: translate(-50%, -50%) translateX(-5px);
+  }
+}
+
+// Loading Animations
+@keyframes loadingShine {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes loadingProgress {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(0.7);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+
+// Анимация закрытия вкладки
+@keyframes tabClose {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.1) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+// Для закрывающихся вкладок
+.browser-tab.closing {
+  animation: tabClose 0.5s ease forwards !important;
+  pointer-events: none;
+}
+
+// ===== TAB ANIMATION VARIATIONS =====
+.browser-tab:nth-child(odd) {
+  animation-duration: 22s, var(--float-speed, 6s), 18s;
+}
+
+.browser-tab:nth-child(even) {
+  animation-duration: 26s, var(--float-speed, 6s), 22s;
+}
+
+.browser-tab:nth-child(3n) {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1), ease-in-out,
+    ease-in-out;
+}
+
+// ===== RESPONSIVE DESIGN =====
+@media (max-width: 768px) {
+  .browser-tab {
+    min-width: 200px;
+
+    .tab-header {
+      padding: 10px 12px;
+    }
+
+    .tab-title {
+      font-size: 12px;
+    }
+  }
+
+  // Show fewer tabs on mobile
+  .browser-tab:nth-child(n + 5) {
+    display: none;
+  }
+
+  // Reduce animation intensity on mobile
+  .browser-tab {
+    --drift-x: 10vw;
+    --drift-y: 6vh;
+    --float-height: 10px;
+  }
+
+  // Adjust fire effects for mobile
+  .fire-container {
+    height: 50%;
+  }
+
+  .fire-flame {
+    filter: blur(5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .browser-tab {
+    min-width: 180px;
+
+    .tab-header {
+      padding: 8px 10px;
+      gap: 6px;
+    }
+
+    .tab-title {
+      font-size: 11px;
+    }
+  }
+
+  // Show even fewer tabs on very small screens
+  .browser-tab:nth-child(n + 4) {
+    display: none;
+  }
+}

@@ -1,0 +1,242 @@
+/* Анимированный фон для секции историй */
+.animated-background-stories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #000825 0%,
+    #140029 25%,
+    #26002b 50%,
+    #300005 75%,
+    #200020 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  opacity: 0.1;
+}
+
+/* Анимация градиента */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Частицы фона */
+.bg-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(2px);
+  animation: floatParticle linear infinite;
+}
+
+.bg-particle--1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 5%;
+  animation-duration: 20s;
+  animation-delay: 0s;
+}
+
+.bg-particle--2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 10%;
+  animation-duration: 25s;
+  animation-delay: 5s;
+}
+
+.bg-particle--3 {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  left: 15%;
+  animation-duration: 30s;
+  animation-delay: 10s;
+}
+
+.bg-particle--4 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 20%;
+  animation-duration: 22s;
+  animation-delay: 3s;
+}
+
+.bg-particle--5 {
+  width: 70px;
+  height: 70px;
+  bottom: 40%;
+  left: 80%;
+  animation-duration: 28s;
+  animation-delay: 8s;
+}
+
+/* Анимация парящих частиц */
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg) scale(1.1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(0) rotate(180deg) scale(1);
+    opacity: 0.1;
+  }
+  75% {
+    transform: translateY(20px) rotate(270deg) scale(0.9);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1);
+    opacity: 0.1;
+  }
+}
+
+/* Сетка фона */
+.bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(50px) translateX(50px);
+  }
+}
+
+/* Световые блики */
+.bg-shine {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  animation: shinePulse 8s ease-in-out infinite;
+}
+
+.bg-shine--1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.bg-shine--2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+  animation-delay: 2s;
+}
+
+.bg-shine--3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 4s;
+}
+
+@keyframes shinePulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+/* Орбитальные элементы */
+.bg-orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  animation: orbitRotate linear infinite;
+}
+
+.bg-orbit--1 {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 60s;
+}
+
+.bg-orbit--2 {
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 80s;
+  animation-direction: reverse;
+}
+
+.bg-orbit--3 {
+  width: 800px;
+  height: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 100s;
+}
+
+@keyframes orbitRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Эффект параллакса для глубины */
+.story-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-background > * {
+  will-change: transform;
+}

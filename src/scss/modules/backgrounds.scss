@@ -1,0 +1,246 @@
+@import "./backgrounds/routine.scss";
+@import "./backgrounds/dreams.scss";
+@import "./backgrounds/chaos.scss";
+@import "./backgrounds/solution.scss";
+@import "./backgrounds/stories.scss";
+@import "./backgrounds/success.scss";
+// ===== ANIMATED BACKGROUNDS =====
+// Hero Section Background
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.story-section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Gradient 1 - Hero Section (Dark gray to dark purple)
+.gradient-1 {
+  background: linear-gradient(-45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+// Hero IT Pattern
+.hero-mountain-pattern {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/><g fill="white" opacity="0.05"><path d="M20,30 L25,20 L30,30 Z"/><path d="M40,40 L45,30 L50,40 Z"/><path d="M60,50 L65,40 L70,50 Z"/><path d="M80,60 L85,50 L90,60 Z"/></g></svg>');
+}
+
+// Floating elements base styles
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.floating-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+  filter: blur(0.5px);
+
+  &:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    font-size: 2.5rem;
+  }
+
+  &:nth-child(2) {
+    top: 60%;
+    left: 85%;
+    animation-delay: 1s;
+    font-size: 2.2rem;
+  }
+
+  &:nth-child(3) {
+    top: 80%;
+    left: 15%;
+    animation-delay: 2s;
+    font-size: 2.8rem;
+  }
+
+  &:nth-child(4) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 3s;
+    font-size: 2.3rem;
+  }
+
+  &:nth-child(5) {
+    top: 70%;
+    left: 90%;
+    animation-delay: 4s;
+    font-size: 2.6rem;
+  }
+
+  &:nth-child(6) {
+    top: 10%;
+    left: 70%;
+    animation-delay: 5s;
+    font-size: 2.4rem;
+  }
+}
+
+// IT Elements for Hero Section
+.hero-it-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.it-element {
+  position: absolute;
+  opacity: 0.1;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+  animation: float 8s ease-in-out infinite;
+
+  &--code {
+    font-size: 1.2rem;
+    top: 25%;
+    left: 5%;
+    animation-delay: 0.5s;
+  }
+
+  &--brackets {
+    font-size: 2rem;
+    top: 65%;
+    left: 8%;
+    animation-delay: 2s;
+  }
+
+  &--gear {
+    font-size: 1.5rem;
+    top: 45%;
+    left: 88%;
+    animation-delay: 3.5s;
+    animation: rotate 20s linear infinite;
+  }
+
+  &--server {
+    font-size: 1rem;
+    top: 75%;
+    left: 92%;
+    animation-delay: 1s;
+  }
+
+  &--binary {
+    font-size: 0.9rem;
+    top: 15%;
+    left: 85%;
+    animation-delay: 4s;
+    font-family: monospace;
+    letter-spacing: 2px;
+  }
+}
+
+// Keyframes for animations
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(-5deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Pulse animation for interactive elements
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+// Additional animations for IT elements
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

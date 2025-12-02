@@ -1,0 +1,21 @@
+{
+  "name": "wanderlist-storytelling",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -t true"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "concurrently": "^7.6.0",
+    "gh-pages": "^6.3.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.60.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.1.12"
+  }
+}

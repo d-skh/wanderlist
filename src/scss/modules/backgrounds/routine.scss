@@ -1,0 +1,509 @@
+// ===== DARK ROUTINE SECTION BACKGROUND =====
+
+// Очень темный серый градиент
+.gradient-routine-dark {
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #1a1a1a 25%,
+    #2d2d2d 50%,
+    #1f1f1f 75%,
+    #0f0f0f 100%
+  );
+  background-size: 400% 400%;
+  animation: darkGradientShift 20s ease infinite;
+}
+
+// Темный оверлей
+.routine-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+// Улучшенный эффект тумана/дымки
+.fog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 0% 30%,
+      rgb(83, 0, 179) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 0, 157, 0.9) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(17, 0, 255, 0.9) 0%,
+      transparent 30%
+    ),
+    radial-gradient(circle at 90% 20%, rgba(255, 0, 0, 0.6) 0%, transparent 30%);
+  animation: fogMovement 15s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+// Система конвейерных лент - СТАТИЧНЫЕ (без изменений)
+.conveyor-system {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+// Базовая стилизация конвейерной ленты - СТАТИЧНАЯ (без изменений)
+.conveyor-belt {
+  position: absolute;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 40px,
+    rgba(150, 150, 150, 0.4) 40px,
+    rgba(150, 150, 150, 0.4) 80px
+  );
+  height: 15px;
+  border-radius: 4px;
+  opacity: 0.4;
+
+  // Эффект объема
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    border-radius: 4px 4px 0 0;
+  }
+
+  // Движущиеся разделители для имитации движения ленты
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 78px,
+      rgba(0, 0, 0, 0.4) 78px,
+      rgba(0, 0, 0, 0.4) 80px
+    );
+    animation: conveyorStripes 3s linear infinite;
+  }
+}
+
+// Статичное позиционирование конвейеров (без изменений)
+.conveyor-1 {
+  top: 21%;
+  left: -10%;
+  width: 120%;
+  transform: rotate(15deg);
+}
+
+.conveyor-2 {
+  top: 36%;
+  left: -15%;
+  width: 130%;
+  transform: rotate(-10deg);
+}
+
+.conveyor-3 {
+  top: 51%;
+  left: -20%;
+  width: 140%;
+  transform: rotate(8deg);
+}
+
+.conveyor-4 {
+  top: 66%;
+  left: -25%;
+  width: 150%;
+  transform: rotate(-5deg);
+}
+
+.conveyor-5 {
+  top: 81%;
+  left: -30%;
+  width: 160%;
+  transform: rotate(12deg);
+}
+
+// Контейнер для движущихся элементов (без изменений)
+.conveyor-items-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  filter: brightness(0.5) grayscale(0.6) contrast(1.2);
+}
+
+// Треки для элементов (невидимые, только для позиционирования) (без изменений)
+.conveyor-track {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+
+  .moving-item {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    filter: blur(0.2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    animation: moveOnConveyor 20s linear infinite;
+  }
+}
+
+// Конвейер 1 - 15 градусов (без изменений)
+.conveyor-track-1 {
+  top: 20%;
+  transform: rotate(15deg);
+
+  .moving-item:nth-child(1) {
+    animation-delay: 0s;
+    left: 0%;
+  }
+  .moving-item:nth-child(2) {
+    animation-delay: 7s;
+    left: 0%;
+  }
+  .moving-item:nth-child(3) {
+    animation-delay: 14s;
+    left: 0%;
+  }
+}
+
+// Конвейер 2 - -10 градусов (без изменений)
+.conveyor-track-2 {
+  top: 35%;
+  transform: rotate(-10deg);
+
+  .moving-item:nth-child(1) {
+    animation-delay: 2s;
+    left: 0%;
+  }
+  .moving-item:nth-child(2) {
+    animation-delay: 9s;
+    left: 0%;
+  }
+  .moving-item:nth-child(3) {
+    animation-delay: 16s;
+    left: 0%;
+  }
+}
+
+// Конвейер 3 - 8 градусов (без изменений)
+.conveyor-track-3 {
+  top: 50%;
+  transform: rotate(8deg);
+
+  .moving-item:nth-child(1) {
+    animation-delay: 4s;
+    left: 0%;
+  }
+  .moving-item:nth-child(2) {
+    animation-delay: 11s;
+    left: 0%;
+  }
+  .moving-item:nth-child(3) {
+    animation-delay: 18s;
+    left: 0%;
+  }
+}
+
+// Конвейер 4 - -5 градусов (без изменений)
+.conveyor-track-4 {
+  top: 65%;
+  transform: rotate(-5deg);
+
+  .moving-item:nth-child(1) {
+    animation-delay: 1s;
+    left: 0%;
+  }
+  .moving-item:nth-child(2) {
+    animation-delay: 8s;
+    left: 0%;
+  }
+  .moving-item:nth-child(3) {
+    animation-delay: 15s;
+    left: 0%;
+  }
+}
+
+// Конвейер 5 - 12 градусов (без изменений)
+.conveyor-track-5 {
+  top: 80%;
+  transform: rotate(12deg);
+
+  .moving-item:nth-child(1) {
+    animation-delay: 3s;
+    left: 0%;
+  }
+  .moving-item:nth-child(2) {
+    animation-delay: 10s;
+    left: 0%;
+  }
+  .moving-item:nth-child(3) {
+    animation-delay: 17s;
+    left: 0%;
+  }
+}
+
+// ===== ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ ДНЕЙ НЕДЕЛИ =====
+.week-days {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.week-day {
+  position: absolute;
+  font-family: "Arial", sans-serif;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  animation: smoothFloat 18s ease-in-out infinite;
+
+  // Плавное появление и исчезновение
+  &:nth-child(1) {
+    top: 12%;
+    left: 8%;
+    animation-delay: 0s;
+  }
+  &:nth-child(2) {
+    top: 28%;
+    left: 78%;
+    animation-delay: 3.5s;
+  }
+  &:nth-child(3) {
+    top: 52%;
+    left: 12%;
+    animation-delay: 7s;
+  }
+  &:nth-child(4) {
+    top: 72%;
+    left: 82%;
+    animation-delay: 10.5s;
+  }
+  &:nth-child(5) {
+    top: 88%;
+    left: 42%;
+    animation-delay: 14s;
+  }
+}
+
+// ===== ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ ВРЕМЕННЫХ МЕТОК =====
+.time-labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.time-label {
+  position: absolute;
+  font-family: "Courier New", monospace;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: gentlePulse 16s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.3;
+
+  .time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .activity {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  // Позиционирование с плавным появлением
+  &[data-time="06:30"] {
+    top: 15%;
+    left: 22%;
+    animation-delay: 1s;
+  }
+  &[data-time="08:00"] {
+    top: 25%;
+    left: 72%;
+    animation-delay: 4s;
+  }
+  &[data-time="09:00"] {
+    top: 45%;
+    left: 28%;
+    animation-delay: 7s;
+  }
+  &[data-time="13:00"] {
+    top: 55%;
+    left: 68%;
+    animation-delay: 10s;
+  }
+  &[data-time="17:00"] {
+    top: 75%;
+    left: 32%;
+    animation-delay: 13s;
+  }
+  &[data-time="19:00"] {
+    top: 85%;
+    left: 62%;
+    animation-delay: 16s;
+  }
+  &[data-time="22:00"] {
+    top: 35%;
+    left: 88%;
+    animation-delay: 19s;
+  }
+  &[data-time="23:30"] {
+    top: 95%;
+    left: 45%;
+    animation-delay: 22s;
+  }
+}
+
+// ===== ОБНОВЛЕННЫЕ АНИМАЦИИ =====
+@keyframes darkGradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Анимация движения по конвейеру (без изменений)
+@keyframes moveOnConveyor {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0.6;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+    opacity: 0.6;
+  }
+}
+
+// Анимация полосок на конвейере (без изменений)
+@keyframes conveyorStripes {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-80px);
+  }
+}
+
+// Улучшенная анимация тумана
+@keyframes fogMovement {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1) translate(0, 0);
+  }
+  25% {
+    opacity: 0.6;
+    transform: scale(1.05) translate(10px, 5px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02) translate(-5px, 10px);
+  }
+  75% {
+    opacity: 0.55;
+    transform: scale(1.03) translate(5px, -5px);
+  }
+}
+
+// Новая плавная анимация для дней недели
+@keyframes smoothFloat {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0px) translateX(0px) scale(0.95);
+  }
+  10%,
+  30% {
+    opacity: 1;
+    transform: translateY(-8px) translateX(4px) scale(1);
+  }
+  20% {
+    opacity: 0.9;
+    transform: translateY(-12px) translateX(-3px) scale(1.05);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(5px) translateX(2px) scale(0.98);
+  }
+}
+
+// Новая анимация для временных меток
+@keyframes gentlePulse {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0px) scale(0.9);
+  }
+  15%,
+  35% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1);
+  }
+  25% {
+    opacity: 0.8;
+    transform: translateY(-8px) scale(1.02);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(3px) scale(0.95);
+  }
+}
