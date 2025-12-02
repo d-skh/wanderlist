@@ -5,7 +5,7 @@ const repoName = "wanderlist"; // ЗАМЕНИ НА СВОЕ ИМЯ РЕПОЗИ
 
 export default defineConfig({
   // Базовый путь для GitHub Pages
-  base: process.env.NODE_ENV === "production" ? `/${repoName}/` : "/",
+  base: "/wanderlist/",
 
   root: ".",
   publicDir: "public",
